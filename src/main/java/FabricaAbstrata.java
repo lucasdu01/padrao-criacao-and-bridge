@@ -1,5 +1,7 @@
-public interface FabricaAbstrata {
+public abstract class FabricaAbstrata {
 
-    Contrato createContrato();
-    Procuracao createProcuracao();
+    protected abstract Assinatura createAssinatura();
+
+    public abstract Contrato createContrato();
+    public abstract Procuracao createProcuracao();
 }

@@ -1,10 +1,14 @@
-public class FabricaPJ implements FabricaAbstrata {
+public class FabricaPJ extends FabricaAbstrata {
+
+    protected Assinatura createAssinatura() {
+        return new AssinaturaDigital();
+    }
 
     public Contrato createContrato() {
-        return new ContratoPJ();
+        return new ContratoPJ(createAssinatura());
     }
 
     public Procuracao createProcuracao() {
-        return new ProcuracaoPJ();
+        return new ProcuracaoPJ(createAssinatura());
     }
 }

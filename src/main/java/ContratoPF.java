@@ -1,6 +1,10 @@
-public class ContratoPF implements Contrato {
+public class ContratoPF extends Contrato {
 
-    public String emitir() {
-        return "Contrato PF emitido";
+    public ContratoPF(Assinatura assinatura) {
+        super(assinatura);
+    }
+
+    protected String descricao() {
+        return "Contrato PF";
     }
 }

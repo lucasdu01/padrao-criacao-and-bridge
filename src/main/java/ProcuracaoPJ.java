@@ -1,6 +1,10 @@
-public class ProcuracaoPJ implements Procuracao {
+public class ProcuracaoPJ extends Procuracao {
 
-    public String emitir() {
-        return "Procuracao PJ emitido";
+    public ProcuracaoPJ(Assinatura assinatura) {
+        super(assinatura);
+    }
+
+    protected String descricao() {
+        return "Procuracao PJ";
     }
 }
